@@ -112,6 +112,19 @@ function gstcCreateGUI() {
 	fields = fields.map(([key, value]) => generateInputRow(key, value));
 
 	const guiLayoutCode = `
+		<p>Import via JSON</p>
+		<textarea class="json-import" style="padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; font-family: monospace; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;" rows="4" placeholder="Paste the JSON file contents here"></textarea><br/>
+		<button class="growButton growCancelButton import-theme-json">Import Theme</button><br/>
+		<br/>
+		<p>Community Themes</p>
+		<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
+			<option style="color: #1E1E1E">Default Theme</option>
+			<option style="color: #1E1E1E">Cloow Nightmare</option>
+		</select><br/>
+		<button class="growButton growCancelButton import-theme-community">Import Theme</button><br/>
+		<br/>
+		<br/>
+		<p>Customize</p>
 		${fields.join("")}
   `;
 
@@ -125,16 +138,16 @@ function gstcCreateGUI() {
 		<div class="GTModal gstcModal">
 		<div class="successBox">
 				<div class="header">
-						<span class="growsprite"><img src="https://cdn.growstocks.xyz/item/favicon.png" title="Paintbrush icon" itemsprite></span>&nbsp;&nbsp;&nbsp;<p style="font-family: CenturyGothicBold;font-size: 30px;">${gstcName} v${gstcVersion}</p><br/>
+						<span class="growsprite"><img src="https://cdn.growstocks.xyz/item/favicon.png" title="Paintbrush icon" itemsprite></span>&nbsp;&nbsp;&nbsp;<p style="font-family: CenturyGothicBold;font-size: 30px;">${gstcName} v${gstcVersion}</p><button class="growButton gsct-apply">Apply Theme</button>
+						<button class="growButton gsct-close growCancelButton">Close</button><br/>
 						<p>${gstcDescription} by ${gstcDeveloper}</p>
 				</div>
 				<div class="colorable">
-						<button class="growButton gsct-apply">Apply Theme</button>
-						<button class="growButton gsct-close growCancelButton">Close</button>
 						<br>
 						${guiLayoutCode}
 						</p>
 						<button class="growButton gsct-apply">Apply Theme</button>
+						<button class="growButton gsct-export">Export or Share Theme</button>
 						<button class="growButton gsct-close growCancelButton">Close</button>
 				</div>
 		</div>
@@ -145,6 +158,8 @@ function gstcCreateGUI() {
 	$("body").append(modal);
 
 	$(".gsct-apply").on("click", gstcApplyTheme);
+	$(".gsct-export").on("click", gstcExportTheme);
+	$(".import-theme-json").on("click", gstcImportThemeJSON);
 	$(".gstcTrigger").on("click", () => {
 		$(".dark-bg").fadeIn(function(){
 			$(".gstcModal").animate({
@@ -166,6 +181,35 @@ function gstcApplyTheme() {
 		localStorage.setItem(`gsCTheme-${$(this).attr('data-field')}`, $(this).val());
 	})
 	gstcLoadTheme(getTheme());
+}
+
+function gstcImportThemeJSON() {
+	const validKeys = Object.keys(getTheme());
+	try {
+		const jsonTheme = JSON.parse($(".json-import").val());
+		console.log(jsonTheme);
+		validKeys.forEach(value => {
+			localStorage.setItem(`gsCTheme-${value}`, jsonTheme[value]);
+			$(`input[data-field=${value}]`).val(jsonTheme[value]);
+		});
+		gstcLoadTheme(getTheme());
+	} catch(err) {
+		alert("Invalid theme. Please try again");
+	}
+}
+
+function gstcExportTheme() {
+	downloadObjectAsJson(getTheme(), prompt("Please name your theme"));
+}
+
+function downloadObjectAsJson(obj, exportName) {
+	const dataUri = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+	const downloadElement = document.createElement('a');
+	downloadElement.setAttribute("href", dataUri);
+	downloadElement.setAttribute("download", exportName + ".json");
+	$("body").append(downloadElement);
+	downloadElement.click();
+	downloadElement.remove();
 }
 
 function gstcRun() {
