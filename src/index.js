@@ -12,6 +12,8 @@ const gstcDescription = "A plugin that gives you power to take control over the 
 const gstcVersion = "1.1";
 const gstcDeveloper = "Jabo#7775";
 
+let communityThemes = null;
+
 const gstcThemePropertyDescriptionMapping = {
 	accentColor: "Color of the header and footer including the navigation bar",
 	backgroundColor: "Color or Image URL of the main background",
@@ -97,7 +99,7 @@ function gstcLoadTheme(theme) {
 	titleBarsChild.css("color", theme.titleBarForeground);
 }
 
-function gstcCreateGUI() {
+async function gstcCreateGUI() {
 	const generateInputRow = (propertyName, propertyValue) => {
 		return `
 			<div style="width: 100%; text-align: left; margin-bottom: 0.5rem">
@@ -111,6 +113,10 @@ function gstcCreateGUI() {
 	let fields = Object.entries(getTheme());
 	fields = fields.map(([key, value]) => generateInputRow(key, value));
 
+	let themes = await fetch('https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/themes-list.json');
+	themes = await themes.json();
+	communityThemes = themes;
+
 	const guiLayoutCode = `
 		<p>Import via JSON</p>
 		<textarea class="json-import" style="padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; font-family: monospace; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;" rows="4" placeholder="Paste the JSON file contents here"></textarea><br/>
@@ -118,8 +124,7 @@ function gstcCreateGUI() {
 		<br/>
 		<p>Community Themes</p>
 		<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
-			<option style="color: #1E1E1E">Default Theme</option>
-			<option style="color: #1E1E1E">Cloow Nightmare</option>
+			${themes && themes.map(theme => `<option style="color: #1E1E1E">${theme.themeName}</option>`)}
 		</select><br/>
 		<button class="growButton growCancelButton import-theme-community">Import Theme</button><br/>
 		<br/>
@@ -160,6 +165,7 @@ function gstcCreateGUI() {
 	$(".gsct-apply").on("click", gstcApplyTheme);
 	$(".gsct-export").on("click", gstcExportTheme);
 	$(".import-theme-json").on("click", gstcImportThemeJSON);
+	$(".import-theme-community").on("click", gstcImportThemeCommunity);
 	$(".gstcTrigger").on("click", () => {
 		$(".dark-bg").fadeIn(function(){
 			$(".gstcModal").animate({
@@ -187,7 +193,6 @@ function gstcImportThemeJSON() {
 	const validKeys = Object.keys(getTheme());
 	try {
 		const jsonTheme = JSON.parse($(".json-import").val());
-		console.log(jsonTheme);
 		validKeys.forEach(value => {
 			localStorage.setItem(`gsCTheme-${value}`, jsonTheme[value]);
 			$(`input[data-field=${value}]`).val(jsonTheme[value]);
@@ -196,6 +201,30 @@ function gstcImportThemeJSON() {
 	} catch(err) {
 		alert("Invalid theme. Please try again");
 	}
+}
+
+async function gstcImportThemeCommunity() {
+	const validKeys = Object.keys(getTheme());
+	const communityTheme = communityThemes.find(theme => theme.themeName === $(".community-import").val());
+	if(!communityTheme.url) return alert("Please select a community theme from the dropdown menu");
+	$(".import-theme-community").html("Importing...");
+	$(".import-theme-community").attr("disabled", "true");
+	let theme = await fetch(communityTheme.url);
+	theme = await theme.json().catch(err => { 
+		console.error(err); 
+		$(".import-theme-community").removeAttr("disabled")
+		$(".import-theme-community").html("Import Theme"); 
+		alert("Failed to load the selected theme.") 
+	});
+	validKeys.forEach(value => {
+		localStorage.setItem(`gsCTheme-${value}`, theme[value]);
+		$(`input[data-field=${value}]`).val(theme[value]);
+	});
+	$(".import-theme-community").html("Imported!");
+	setTimeout(() => {
+		$(".import-theme-community").removeAttr("disabled");
+		$(".import-theme-community").html("Import Theme");
+	}, 1000);
 }
 
 function gstcExportTheme() {
