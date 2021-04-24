@@ -1,7 +1,7 @@
 /*
 	@plugin
 	@name GrowStocks Theme Customization Plugin
-	@version 1.1
+	@version 2.0
 	@author Jabo
 	@description A plugin that gives you power to take control over the website's design.
 	@endplugin
