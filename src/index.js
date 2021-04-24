@@ -7,37 +7,43 @@
 	@endplugin
 */
 
-const gstcName = "GrowStocks Theme Customization Beta";
+const gstcName = "GrowStocks Theme Customization";
 const gstcDescription = "A plugin that gives you power to take control over the website's design.";
-const gstcVersion = "1.1";
+const gstcVersion = "2.0";
 const gstcDeveloper = "Jabo#7775";
 
 let communityThemes = null;
 
 const gstcThemePropertyDescriptionMapping = {
 	accentColor: "Color of the header and footer including the navigation bar",
-	backgroundColor: "Color or Image URL of the main background",
+	backgroundColor: "Background color or image of the main background",
+
+	headerBackground: "Background color or image of the header's background (will override the accent color)",
 
 	navBarShadow: "Navigation bar shadow",
-	navBarActivePage: "Color of the current active page on the navigation bar",
+	navBarActivePage: "Background color or image of the current active page on the navigation bar",
+	navBarForegroundColor: "Text color of the navigation bar",
 
-	searchButtonBackground: "Color of the search button's background",
+	searchButtonBackground: "Background color or image of the search button",
 	searchButtonShadow: "Search button's shadow",
+	searchButtonForeground: "Text color of the search button",
+	searchButtonBorderRadius: "Search button's border radius",
 
 	priceChartShadow: "Shadow of the price graph on an item's page",
 
-	itemChipBackground: "Background color of a default window such as this GUI",
+	itemChipBackground: "Background color or image of a default window such as this GUI",
 	itemChipForeground: "Text color of a default window such as this GUI",
 	itemChipShadow: "Shadow of a default window such as this GUI",
 	itemChipBorder: "Border of a default window such as this GUI",
 
-	titleBarBackground: "Background color of a title window",
+	titleBarBackground: "Background color or image of a title window",
 	titleBarForeground: "Text color of a title window",
 	titleBarShadow: "Shadow of a title window",
 	titleBarBorder: "Border of a title window",
 
-	footerBackground: "Color of the footer's background (will override the accent color)",
-	footerShadow: "Shadow of the footer"
+	footerBackground: "Background color or image of the footer's background (will override the accent color)",
+	footerShadow: "Shadow of the footer",
+	footerForeground: "Text color of the footer"
 }
 
 function getTheme() {
@@ -46,11 +52,16 @@ function getTheme() {
 		accentColor: localStorage.getItem("gsCTheme-accentColor") || "",
 		backgroundColor: localStorage.getItem("gsCTheme-backgroundColor") || "",
 
+		headerBackground: localStorage.getItem("gsCTheme-headerBackground") || "",
+
 		navBarShadow: localStorage.getItem("gsCTheme-navBarShadow") || "",
 		navBarActivePage: localStorage.getItem("gsCTheme-navBarActivePage") || "",
+		navBarForegroundColor: localStorage.getItem("gsCTheme-navBarForegroundColor") || "",
 
 		searchButtonBackground: localStorage.getItem("gsCTheme-searchButtonBackground") || "",
+		searchButtonForeground: localStorage.getItem("gsCTheme-searchButtonForeground") || "",
 		searchButtonShadow: localStorage.getItem("gsCTheme-searchButtonShadow") || "",
+		searchButtonBorderRadius: localStorage.getItem("gsCTheme-searchButtonBorderRadius") || "",
 
 		priceChartShadow: localStorage.getItem("gsCTheme-priceChartShadow") || "",
 
@@ -65,7 +76,8 @@ function getTheme() {
 		titleBarBorder: localStorage.getItem("gsCTheme-titleBarBorder") || "",
 
 		footerBackground: localStorage.getItem("gsCTheme-footerBackground") || "",
-		footerShadow: localStorage.getItem("gsCTheme-footerShadow") || ""
+		footerShadow: localStorage.getItem("gsCTheme-footerShadow") || "",
+		footerForeground: localStorage.getItem("gsCTheme-footerForeground") || "",
 	}
 
 	return theme;
@@ -73,30 +85,39 @@ function getTheme() {
 
 function gstcLoadTheme(theme) {
 	$("body").css("background", theme.backgroundColor);
-	$("footer").css("background-color", theme.footerBackground || theme.accentColor);
-	$(".navBar").css("background-color", theme.accentColor);
-	$(".navBar .active").css("background-color", theme.navBarActivePage);
+	$("footer").css("background", theme.footerBackground || theme.accentColor);
+	$("footer, footer *").css("color", theme.footerForeground);
+	$("footer hr").css("background-color", theme.footerForeground);
+	$("footer hr").css("border-color", theme.footerForeground);
+	$("footer a p").css("border", "1px solid " + theme.footerForeground);
+	$(".navBar").css("background", theme.accentColor);
+	$(".navBar .active").css("background", theme.navBarActivePage);
 	$(".navBar").css("box-shadow", theme.navBarShadow);
+	$(".navBar *").css("color", theme.navBarForegroundColor);
 	$("footer").css("box-shadow", theme.footerShadow);
-	$("header").css("background-color", theme.accentColor + "BB");
-	$("#searchButton").css("background-color", theme.searchButtonBackground);
+	$("header").css("background", theme.headerBackground || theme.accentColor + (theme.accentColor.startsWith("#") && theme.accentColor.length < 7 ? "BB" : ""));
+	$("#searchButton").css("background", theme.searchButtonBackground);
 	$("#searchButton").css("box-shadow", theme.searchButtonShadow);
+	$("#searchButton").css("color", theme.searchButtonForeground);
+	$("#searchButton").css("border-radius", theme.searchButtonBorderRadius);
 	$(".chartWrap").css("box-shadow", theme.priceChartShadow);
 	$(".floatButton, .floatButton2").css("background", theme.accentColor);
+	$("div").css("background-size", "cover!important");
 
 	const itemChips = $(".itemChipHead");
 	const itemChipsChild = $(".itemChipHead h4, .itemChipHead b, .itemChipHead p, .itemChipHead h2, .itemChipHead a, .itemChipHead .reportPrice");
 	itemChips.css("box-shadow", theme.itemChipShadow);
-	itemChips.css("background-color", theme.itemChipBackground);
+	itemChips.css("background", theme.itemChipBackground);
 	itemChips.css("border", theme.itemChipBorder);
 	itemChipsChild.css("color", theme.itemChipForeground);
 
 	const titleBars = $(".titleBar2, .titleBar, .titleBar3");
 	const titleBarsChild = $(".titleBar2 h2, .titleBar2 b, .titleBar2 p, .titleBar h2, .titleBar b, .titleBar p, .titleBar p span, .titleBar h3, .titleBar3 h2, .titleBar3 b, .titleBar3 p");
-	titleBars.css("background-color", theme.titleBarBackground);
+	titleBars.css("background", theme.titleBarBackground);
 	titleBars.css("box-shadow", theme.titleBarShadow);
 	titleBars.css("border", theme.titleBarBorder);
 	titleBarsChild.css("color", theme.titleBarForeground);
+	
 }
 
 async function gstcCreateGUI() {
@@ -113,7 +134,10 @@ async function gstcCreateGUI() {
 	let fields = Object.entries(getTheme());
 	fields = fields.map(([key, value]) => generateInputRow(key, value));
 
-	let themes = await fetch('https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/themes-list.json');
+	const currentDay = new Date();
+	const requestTimestamp = currentDay.getHours();
+
+	let themes = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/themes-list.json?v=${requestTimestamp}`);
 	themes = await themes.json();
 	communityThemes = themes;
 
@@ -123,6 +147,7 @@ async function gstcCreateGUI() {
 		<button class="growButton growCancelButton import-theme-json">Import Theme</button><br/>
 		<br/>
 		<p>Community Themes</p>
+		<p style="font-size: 0.8rem;">These are the themes that was submitted by the GrowStocks community. Share your theme by <a href="https://discord.gg/GMucqpWYE4">joining the GrowStocks Discord Server</a> and send a DM to <b>Jabo#7775</b></p>
 		<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
 			${themes && themes.map(theme => `<option style="color: #1E1E1E">${theme.themeName}</option>`)}
 		</select><br/>
@@ -130,6 +155,8 @@ async function gstcCreateGUI() {
 		<br/>
 		<br/>
 		<p>Customize</p>
+		<p style="font-size: 0.8rem;">All of the value should be a valid CSS value</p>
+		<p style="font-size: 0.8rem;">Tip: to use image as background use this as a value <code>url("paste image url here")</code></p>
 		${fields.join("")}
   `;
 
@@ -143,8 +170,7 @@ async function gstcCreateGUI() {
 		<div class="GTModal gstcModal">
 		<div class="successBox">
 				<div class="header">
-						<span class="growsprite"><img src="https://cdn.growstocks.xyz/item/favicon.png" title="Paintbrush icon" itemsprite></span>&nbsp;&nbsp;&nbsp;<p style="font-family: CenturyGothicBold;font-size: 30px;">${gstcName} v${gstcVersion}</p><button class="growButton gsct-apply">Apply Theme</button>
-						<button class="growButton gsct-close growCancelButton">Close</button><br/>
+						<span class="growsprite"><img src="https://cdn.growstocks.xyz/item/favicon.png" title="Paintbrush icon" itemsprite></span>&nbsp;&nbsp;&nbsp;<p style="font-family: CenturyGothicBold;font-size: 30px;">${gstcName} v${gstcVersion}</p><br/>
 						<p>${gstcDescription} by ${gstcDeveloper}</p>
 				</div>
 				<div class="colorable">
@@ -220,6 +246,7 @@ async function gstcImportThemeCommunity() {
 		localStorage.setItem(`gsCTheme-${value}`, theme[value]);
 		$(`input[data-field=${value}]`).val(theme[value]);
 	});
+	gstcLoadTheme(getTheme());
 	$(".import-theme-community").html("Imported!");
 	setTimeout(() => {
 		$(".import-theme-community").removeAttr("disabled");
