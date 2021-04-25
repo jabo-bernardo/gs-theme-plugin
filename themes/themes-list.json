@@ -26,5 +26,9 @@
 	{
 		"themeName": "Lokean's Theme",
 		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/lokean-theme.json"
+	},
+	{
+		"themeName": "GrowStocks X BlockCorp",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/blockcorp.json"
 	}
 ]
