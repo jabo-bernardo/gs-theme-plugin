@@ -3,13 +3,13 @@
 	@name GrowStocks Theme Customization Plugin
 	@version 2.1
 	@author Jabo
-	@description A plugin that gives you power to take control over the website's design.
+	@description A plugin that gives you the power to take control over the website's design.
 	@localStoragePrefix gsCTheme-
 	@endplugin
 */
 
 const gstcName = "GrowStocks Theme Customization";
-const gstcDescription = "A plugin that gives you power to take control over the website's design.";
+const gstcDescription = "A plugin that gives you the power to take control over the website's design";
 const gstcVersion = "2.1";
 const gstcDeveloper = "Jabo#7775";
 
@@ -148,7 +148,7 @@ async function gstcCreateGUI() {
 		<button class="growButton growCancelButton import-theme-json">Import Theme</button><br/>
 		<br/>
 		<p>Community Themes</p>
-		<p style="font-size: 0.8rem;">These are the themes that was submitted by the GrowStocks community. Share your theme by <a href="https://discord.gg/GMucqpWYE4">joining the GrowStocks Discord Server</a> and send a DM to <b>Jabo#7775</b></p>
+		<p style="font-size: 0.8rem;">These are the themes that were submitted by the GrowStocks community. Share your theme by <a href="https://discord.gg/GMucqpWYE4">joining the GrowStocks Discord Server</a>, then send a DM to <b>Jabo#7775</b></p>
 		<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
 			${themes && themes.map(theme => `<option style="color: #1E1E1E">${theme.themeName}</option>`)}
 		</select><br/>
@@ -157,7 +157,7 @@ async function gstcCreateGUI() {
 		<br/>
 		<p>Customize</p>
 		<p style="font-size: 0.8rem;">All of the value should be a valid CSS value</p>
-		<p style="font-size: 0.8rem;">Tip: to use image as background use this as a value <code>url("paste image url here")</code></p>
+		<p style="font-size: 0.8rem;">Tip: to use an image as the background use this as a value <code>url("paste image url here")</code></p>
 		${fields.join("")}
   `;
 
