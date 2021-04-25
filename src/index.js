@@ -1,15 +1,16 @@
 /*
 	@plugin
 	@name GrowStocks Theme Customization Plugin
-	@version 2.0
+	@version 2.1
 	@author Jabo
 	@description A plugin that gives you power to take control over the website's design.
+	@localStoragePrefix gsCTheme-
 	@endplugin
 */
 
 const gstcName = "GrowStocks Theme Customization";
 const gstcDescription = "A plugin that gives you power to take control over the website's design.";
-const gstcVersion = "2.0";
+const gstcVersion = "2.1";
 const gstcDeveloper = "Jabo#7775";
 
 let communityThemes = null;
@@ -192,19 +193,23 @@ async function gstcCreateGUI() {
 	$(".gsct-export").on("click", gstcExportTheme);
 	$(".import-theme-json").on("click", gstcImportThemeJSON);
 	$(".import-theme-community").on("click", gstcImportThemeCommunity);
-	$(".gstcTrigger").on("click", () => {
-		$(".dark-bg").fadeIn(function(){
-			$(".gstcModal").animate({
-					height: "toggle"
-				}, 500);
-		});
+	$(".gstcTrigger").on("click", gsctOpenModal);
+	$(".gsct-close").on("click", gsctCloseModal);
+}
+
+function gsctCloseModal() {
+	$(".gstcModal").animate({
+		height: "toggle",
+	}, 500, function(){
+			$(".dark-bg").fadeOut();
 	});
-	$(".gsct-close").on("click", () => {
+}
+
+function gsctOpenModal() {
+	$(".dark-bg").fadeIn(function(){
 		$(".gstcModal").animate({
-				height: "toggle",
-		}, 500, function(){
-				$(".dark-bg").fadeOut();
-		});
+				height: "toggle"
+			}, 500);
 	});
 }
 
@@ -213,6 +218,7 @@ function gstcApplyTheme() {
 		localStorage.setItem(`gsCTheme-${$(this).attr('data-field')}`, $(this).val());
 	})
 	gstcLoadTheme(getTheme());
+	gsctCloseModal()
 }
 
 function gstcImportThemeJSON() {
@@ -223,6 +229,7 @@ function gstcImportThemeJSON() {
 			localStorage.setItem(`gsCTheme-${value}`, jsonTheme[value]);
 			$(`input[data-field=${value}]`).val(jsonTheme[value]);
 		});
+		gsctCloseModal()
 		gstcLoadTheme(getTheme());
 	} catch(err) {
 		alert("Invalid theme. Please try again");
@@ -252,6 +259,7 @@ async function gstcImportThemeCommunity() {
 		$(".import-theme-community").removeAttr("disabled");
 		$(".import-theme-community").html("Import Theme");
 	}, 1000);
+	gsctCloseModal()
 }
 
 function gstcExportTheme() {
