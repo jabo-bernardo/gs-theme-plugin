@@ -4,12 +4,16 @@
 		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/default-theme.json"
 	},
 	{
-		"themeName": "Cloow Nightmare",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/cloow-nightmare.json"
+		"themeName": "Lokean's Theme ~ Lokean#1691",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/lokean-theme.json"
 	},
 	{
-		"themeName": "Discord",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/discord.json"
+		"themeName": "Amogus ~ saltydumpling#0249",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/amogus.json"
+	},
+	{
+		"themeName": "Cloow Nightmare",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/cloow-nightmare.json"
 	},
 	{
 		"themeName": "Hello darkness, my old friend",
@@ -24,8 +28,8 @@
 		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/nayeli-flower.json"
 	},
 	{
-		"themeName": "Lokean's Theme",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/lokean-theme.json"
+		"themeName": "Discord",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/discord.json"
 	},
 	{
 		"themeName": "GrowStocks X BlockCorp",
