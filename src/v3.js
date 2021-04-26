@@ -479,7 +479,7 @@
 			let latestAnnouncement = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/announcements/current.json?v=${(new Date()).getMinutes()}`);
 			latestAnnouncement = await latestAnnouncement.json();
 
-			let themes = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/themes-list.json?v=${(new Date()).getMinutes()}`);
+			let themes = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/themes-list.json?v=${(new Date()).getMinutes()}`);
 			themes = await themes.json();
 
 			this.communityThemes = themes;

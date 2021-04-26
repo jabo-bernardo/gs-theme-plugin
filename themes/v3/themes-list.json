@@ -1,0 +1,62 @@
+[
+	{
+		"themeName": "Default GrowStocks Theme",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/default-theme.json"
+	},
+	{
+		"themeName": "Lokean's Theme ~ Lokean#1691",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/lokean-theme.json"
+	},
+	{
+		"themeName": "Amogus ~ saltydumpling#0249",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/amogus.json"
+	},
+	{
+		"themeName": "Pewdiepie ~ Lokean#1691",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/pewdiepie.json"
+	},
+	{
+		"themeName": "Night Light ~ Matteu#0001",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/night-light.json"
+	},
+	{
+		"themeName": "SUS ~ thunder h#1126",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/sus.json"
+	},
+	{
+		"themeName": "Clean Warthog ~ Asmoww#1219",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/clean-warthog.json"
+	},
+	{
+		"themeName": "Cloow's Borgar ~ Cloow#1999",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/cloow-borgar.json"
+	},
+	{
+		"themeName": "Purple Sunflower ~ Cloow#1999",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/purple-sunflower.json"
+	},
+	{
+		"themeName": "Cloow Nightmare",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/cloow-nightmare.json"
+	},
+	{
+		"themeName": "Hello darkness, my old friend",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/hello-darkness.json"
+	},
+	{
+		"themeName": "FLASHBANG!",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/flashbang.json"
+	},
+	{
+		"themeName": "Nayeli's Flower",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/nayeli-flower.json"
+	},
+	{
+		"themeName": "Discord",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/discord.json"
+	},
+	{
+		"themeName": "GrowStocks X BlockCorp",
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/blockcorp.json"
+	}
+]

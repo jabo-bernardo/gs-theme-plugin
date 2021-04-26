@@ -1,62 +1,62 @@
 [
 	{
 		"themeName": "Default GrowStocks Theme",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/default-theme.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/default-theme.json"
 	},
 	{
 		"themeName": "Lokean's Theme ~ Lokean#1691",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/lokean-theme.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/lokean-theme.json"
 	},
 	{
 		"themeName": "Amogus ~ saltydumpling#0249",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/amogus.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/amogus.json"
 	},
 	{
 		"themeName": "Pewdiepie ~ Lokean#1691",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/pewdiepie.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/pewdiepie.json"
 	},
 	{
 		"themeName": "Night Light ~ Matteu#0001",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/night-light.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/night-light.json"
 	},
 	{
 		"themeName": "SUS ~ thunder h#1126",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/sus.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/sus.json"
 	},
 	{
 		"themeName": "Clean Warthog ~ Asmoww#1219",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/clean-warthog.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/clean-warthog.json"
 	},
 	{
 		"themeName": "Cloow's Borgar ~ Cloow#1999",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/cloow-borgar.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/cloow-borgar.json"
 	},
 	{
 		"themeName": "Purple Sunflower ~ Cloow#1999",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/purple-sunflower.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/purple-sunflower.json"
 	},
 	{
 		"themeName": "Cloow Nightmare",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/cloow-nightmare.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/cloow-nightmare.json"
 	},
 	{
 		"themeName": "Hello darkness, my old friend",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/hello-darkness.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/hello-darkness.json"
 	},
 	{
 		"themeName": "FLASHBANG!",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/flashbang.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/flashbang.json"
 	},
 	{
 		"themeName": "Nayeli's Flower",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/nayeli-flower.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/nayeli-flower.json"
 	},
 	{
 		"themeName": "Discord",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/discord.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/discord.json"
 	},
 	{
 		"themeName": "GrowStocks X BlockCorp",
-		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/blockcorp.json"
+		"url": "https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/blockcorp.json"
 	}
 ]
