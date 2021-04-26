@@ -3,7 +3,7 @@
     "background": "url(https://image.freepik.com/free-vector/seamless-sunflower-pattern_53876-75335.jpg)"
   },
   "Header": {
-    "background": ""
+    "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://previews.123rf.com/images/daicokuebisu/daicokuebisu1504/daicokuebisu150400125/38670449-sunflower-pattern.jpg)"
   },
   "Navigation-Bar": {
     "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://previews.123rf.com/images/daicokuebisu/daicokuebisu1504/daicokuebisu150400125/38670449-sunflower-pattern.jpg)",
