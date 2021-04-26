@@ -1,1 +1,24 @@
-{"accentColor":"#3b3b3b","backgroundColor":"url(\"https://cdn.discordapp.com/attachments/562775495901577218/835769617783717908/sussy.png\")","headerBackground":"#2e2e2e","navBarShadow":"","navBarActivePage":"#8f8f8f","navBarForegroundColor":"","searchButtonBackground":"#555555","searchButtonForeground":"","searchButtonShadow":"#A29587","searchButtonBorderRadius":"","priceChartShadow":"","itemChipBackground":"#6d6d6d","itemChipForeground":"#FFFFFF","itemChipShadow":"#A29587","itemChipBorder":"#A29587","titleBarBackground":"#4b4b4b","titleBarForeground":"#FFFFFF","titleBarShadow":"#332E3C","titleBarBorder":"#A29587","footerBackground":"#0f0f0f","footerShadow":"#A29587","footerForeground":""}
+{
+	"accentColor": "#3b3b3b",
+	"backgroundColor": "url(\"https://cdn.discordapp.com/attachments/562775495901577218/835769617783717908/sussy.png\")",
+	"headerBackground": "#2e2e2e",
+	"navBarShadow": "",
+	"navBarActivePage": "#8f8f8f",
+	"navBarForegroundColor": "",
+	"searchButtonBackground": "#555555",
+	"searchButtonForeground": "",
+	"searchButtonShadow": "#A29587",
+	"searchButtonBorderRadius": "",
+	"priceChartShadow": "",
+	"itemChipBackground": "#6d6d6d",
+	"itemChipForeground": "#FFFFFF",
+	"itemChipShadow": "#A29587",
+	"itemChipBorder": "#A29587",
+	"titleBarBackground": "#4b4b4b",
+	"titleBarForeground": "#FFFFFF",
+	"titleBarShadow": "#332E3C",
+	"titleBarBorder": "#A29587",
+	"footerBackground": "#0f0f0f",
+	"footerShadow": "#A29587",
+	"footerForeground": ""
+}

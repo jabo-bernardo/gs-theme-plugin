@@ -1,0 +1,86 @@
+{
+  "Main-Container": {
+    "background": "url(https://image.freepik.com/free-vector/seamless-sunflower-pattern_53876-75335.jpg)"
+  },
+  "Header": {
+    "background": ""
+  },
+  "Navigation-Bar": {
+    "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://previews.123rf.com/images/daicokuebisu/daicokuebisu1504/daicokuebisu150400125/38670449-sunflower-pattern.jpg)",
+    "box-shadow": ""
+  },
+  "Navigation-Bar-Item-or-Link": {
+    "color": ""
+  },
+  "Navigation-Bar-Active-Page": {
+    "background": ""
+  },
+  "Search-Button": {
+    "background": "#ad9250",
+    "box-shadow": "",
+    "border-radius": ""
+  },
+  "Search-Button-Icon": {
+    "color": ""
+  },
+  "Title-Bar": {
+    "background": "#e6c677",
+    "box-shadow": "none",
+    "border": "1px solid #ad9250"
+  },
+  "Title-Bar-Text": {
+    "color": ""
+  },
+  "Title-Bar-Growtopia-Button": {},
+  "Title-Bar:-FAQ-Container": {},
+  "Title-Bar:-FAQ-Container-Text": {},
+  "Item-Chip-Base": {
+    "background": "#f8f19b",
+    "box-shadow": "none",
+    "border": "1px solid #ad9250"
+  },
+  "Item-Chip-Base-Text": {
+    "color": "#ad9250"
+  },
+  "Item-Chip-Base-Button": {},
+  "Item-Chip-Base-Button-Text": {},
+  "Item-Chip-Base-Heading-or-Title": {},
+  "Item-Chip-Base-Item-Name": {},
+  "Item-Information-Container": {},
+  "Item-Information-Status:-Success": {},
+  "Item-Information-Status:-Warning": {},
+  "Item-Information-Status:-Error": {},
+  "Item-Information-Status:-Information": {},
+  "Float-Buttons": {
+    "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://previews.123rf.com/images/daicokuebisu/daicokuebisu1504/daicokuebisu150400125/38670449-sunflower-pattern.jpg)",
+    "box-shadow": ""
+  },
+  "Float-Buttons-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Buy-Item-Button": {},
+  "Float-Buttons:-Buy-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Sell-Item-Button": {},
+  "Float-Buttons:-Sell-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Find-Offer-Button": {},
+  "Float-Buttons:-Find-Offer-Button-Text": {
+    "color": ""
+  },
+  "Footer": {
+    "background": "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://previews.123rf.com/images/daicokuebisu/daicokuebisu1504/daicokuebisu150400125/38670449-sunflower-pattern.jpg)",
+    "box-shadow": ""
+  },
+  "Footer-Text": {
+    "color": ""
+  },
+  "Footer-Heading": {},
+  "Footer-Links": {},
+  "Footer-Social-Links": {},
+  "meta": {
+    "version": 3
+  }
+}

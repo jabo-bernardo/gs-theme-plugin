@@ -1,0 +1,86 @@
+{
+  "Main-Container": {
+    "background": "url(\"https://cdn.discordapp.com/attachments/432915254922575875/835795988681457674/sus.png\")"
+  },
+  "Header": {
+    "background": "#2e2e2e"
+  },
+  "Navigation-Bar": {
+    "background": "#3b3b3b",
+    "box-shadow": ""
+  },
+  "Navigation-Bar-Item-or-Link": {
+    "color": ""
+  },
+  "Navigation-Bar-Active-Page": {
+    "background": "#8f8f8f"
+  },
+  "Search-Button": {
+    "background": "#555555",
+    "box-shadow": "#A29587",
+    "border-radius": ""
+  },
+  "Search-Button-Icon": {
+    "color": ""
+  },
+  "Title-Bar": {
+    "background": "#4b4b4b",
+    "box-shadow": "#332E3C",
+    "border": "#A29587"
+  },
+  "Title-Bar-Text": {
+    "color": "#FFFFFF"
+  },
+  "Title-Bar-Growtopia-Button": {},
+  "Title-Bar:-FAQ-Container": {},
+  "Title-Bar:-FAQ-Container-Text": {},
+  "Item-Chip-Base": {
+    "background": "#6d6d6d",
+    "box-shadow": "#A29587",
+    "border": "#A29587"
+  },
+  "Item-Chip-Base-Text": {
+    "color": "#FFFFFF"
+  },
+  "Item-Chip-Base-Button": {},
+  "Item-Chip-Base-Button-Text": {},
+  "Item-Chip-Base-Heading-or-Title": {},
+  "Item-Chip-Base-Item-Name": {},
+  "Item-Information-Container": {},
+  "Item-Information-Status:-Success": {},
+  "Item-Information-Status:-Warning": {},
+  "Item-Information-Status:-Error": {},
+  "Item-Information-Status:-Information": {},
+  "Float-Buttons": {
+    "background": "#3b3b3b",
+    "box-shadow": ""
+  },
+  "Float-Buttons-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Buy-Item-Button": {},
+  "Float-Buttons:-Buy-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Sell-Item-Button": {},
+  "Float-Buttons:-Sell-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Find-Offer-Button": {},
+  "Float-Buttons:-Find-Offer-Button-Text": {
+    "color": ""
+  },
+  "Footer": {
+    "background": "#0f0f0f",
+    "box-shadow": "#A29587"
+  },
+  "Footer-Text": {
+    "color": ""
+  },
+  "Footer-Heading": {},
+  "Footer-Links": {},
+  "Footer-Social-Links": {},
+  "meta": {
+    "version": 3
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "Main-Container": {
+    "background": "#000a12"
+  },
+  "Header": {
+    "background": "#1c313a"
+  },
+  "Navigation-Bar": {
+    "background": "#1b1b1b",
+    "box-shadow": ""
+  },
+  "Navigation-Bar-Item-or-Link": {
+    "color": ""
+  },
+  "Navigation-Bar-Active-Page": {
+    "background": "#6d6d6d"
+  },
+  "Search-Button": {
+    "background": "#546e7a",
+    "box-shadow": "",
+    "border-radius": "50%"
+  },
+  "Search-Button-Icon": {
+    "color": ""
+  },
+  "Title-Bar": {
+    "background": "#29434e",
+    "box-shadow": "",
+    "border": ""
+  },
+  "Title-Bar-Text": {
+    "color": ""
+  },
+  "Title-Bar-Growtopia-Button": {},
+  "Title-Bar:-FAQ-Container": {},
+  "Title-Bar:-FAQ-Container-Text": {},
+  "Item-Chip-Base": {
+    "background": "#546e7a",
+    "box-shadow": "",
+    "border": ""
+  },
+  "Item-Chip-Base-Text": {
+    "color": ""
+  },
+  "Item-Chip-Base-Button": {},
+  "Item-Chip-Base-Button-Text": {},
+  "Item-Chip-Base-Heading-or-Title": {},
+  "Item-Chip-Base-Item-Name": {},
+  "Item-Information-Container": {},
+  "Item-Information-Status:-Success": {},
+  "Item-Information-Status:-Warning": {},
+  "Item-Information-Status:-Error": {},
+  "Item-Information-Status:-Information": {},
+  "Float-Buttons": {
+    "background": "#1b1b1b",
+    "box-shadow": ""
+  },
+  "Float-Buttons-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Buy-Item-Button": {},
+  "Float-Buttons:-Buy-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Sell-Item-Button": {},
+  "Float-Buttons:-Sell-Item-Button-Text": {
+    "color": ""
+  },
+  "Float-Buttons:-Find-Offer-Button": {},
+  "Float-Buttons:-Find-Offer-Button-Text": {
+    "color": ""
+  },
+  "Footer": {
+    "background": "#1b1b1b",
+    "box-shadow": ""
+  },
+  "Footer-Text": {
+    "color": ""
+  },
+  "Footer-Heading": {},
+  "Footer-Links": {},
+  "Footer-Social-Links": {},
+  "meta": {
+    "version": 3
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "Main-Container": {
+    "background": "#880434 "
+  },
+  "Header": {
+    "background": "url(https://wallpapercave.com/wp/wp5021697.png)"
+  },
+  "Navigation-Bar": {
+    "background": "#160B2C",
+    "box-shadow": "#160B2C"
+  },
+  "Navigation-Bar-Item-or-Link": {
+    "color": "#B4181E"
+  },
+  "Navigation-Bar-Active-Page": {
+    "background": "#3d3255"
+  },
+  "Search-Button": {
+    "background": "#AC043A",
+    "box-shadow": "#160B2C",
+    "border-radius": ""
+  },
+  "Search-Button-Icon": {
+    "color": "#B4181E"
+  },
+  "Title-Bar": {
+    "background": "#160B2C",
+    "box-shadow": "#160B2C",
+    "border": "#000814"
+  },
+  "Title-Bar-Text": {
+    "color": ""
+  },
+  "Title-Bar-Growtopia-Button": {},
+  "Title-Bar:-FAQ-Container": {},
+  "Title-Bar:-FAQ-Container-Text": {},
+  "Item-Chip-Base": {
+    "background": "#1B263B",
+    "box-shadow": "#160B2C",
+    "border": "#160B2C"
+  },
+  "Item-Chip-Base-Text": {
+    "color": ""
+  },
+  "Item-Chip-Base-Button": {},
+  "Item-Chip-Base-Button-Text": {},
+  "Item-Chip-Base-Heading-or-Title": {},
+  "Item-Chip-Base-Item-Name": {},
+  "Item-Information-Container": {},
+  "Item-Information-Status:-Success": {},
+  "Item-Information-Status:-Warning": {},
+  "Item-Information-Status:-Error": {},
+  "Item-Information-Status:-Information": {},
+  "Float-Buttons": {
+    "background": "#160B2C",
+    "box-shadow": "#160B2C"
+  },
+  "Float-Buttons-Text": {
+    "color": "#B4181E"
+  },
+  "Float-Buttons:-Buy-Item-Button": {},
+  "Float-Buttons:-Buy-Item-Button-Text": {
+    "color": "#B4181E"
+  },
+  "Float-Buttons:-Sell-Item-Button": {},
+  "Float-Buttons:-Sell-Item-Button-Text": {
+    "color": "#B4181E"
+  },
+  "Float-Buttons:-Find-Offer-Button": {},
+  "Float-Buttons:-Find-Offer-Button-Text": {
+    "color": "#B4181E"
+  },
+  "Footer": {
+    "background": "url(https://wallpapercave.com/wp/wp5021697.png)",
+    "box-shadow": "#160B2C"
+  },
+  "Footer-Text": {
+    "color": ""
+  },
+  "Footer-Heading": {},
+  "Footer-Links": {},
+  "Footer-Social-Links": {},
+  "meta": {
+    "version": 3
+  }
+}
