@@ -620,7 +620,7 @@ class ThemeCustomization {
 						<input data-component-field data-component-name="${component.name}" data-style=${key} style="margin: 0; width: 150px; font-weight: bold; color: white;" class="GTText suggPrice" value="${(savedComponentStyle && savedComponentStyle[key]) || value || ""}"/>
 					</div>
 				`
-			}).join('');
+			}).join('')
 
 			return `
 				<div style="margin-top: 0.25rem;">
@@ -644,7 +644,7 @@ class ThemeCustomization {
 		`
 	}
 
-	_exportTheme = () => {
+	_exportTheme() {
 		let exportThemeContent = {};
 		const exportName = prompt("Please enter your theme name") || "my-growstocks-theme";
 		componentTree.map(component => {
@@ -665,7 +665,7 @@ class ThemeCustomization {
 		downloadElement.remove();
 	}
 
-	_importThemeJSON = () => {
+	_importThemeJSON() {
 		let jsonData = $(".json-import").val();
 		try {
 			jsonData = JSON.parse(jsonData);
@@ -699,7 +699,7 @@ class ThemeCustomization {
 		}
 	}
 
-	_importCommunityTheme = async () => {
+	async _importCommunityTheme() {
 		const communityTheme = this.communityThemes.find(theme => theme.themeName === $(".community-import").val());
 		if(!communityTheme.url) return alert("Please select a community theme from the dropdown menu");
 		$(".import-theme-community").html("Importing...");
