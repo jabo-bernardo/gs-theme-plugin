@@ -2,6 +2,8 @@
   "Main-Container": {
     "background": "#880434 "
   },
+  "GrowStocks-Loading-Icon": {},
+  "GrowStocks-Loading-Icon-Text": {},
   "Header": {
     "background": "url(https://wallpapercave.com/wp/wp5021697.png)"
   },
@@ -17,20 +19,20 @@
   },
   "Search-Button": {
     "background": "#AC043A",
-    "box-shadow": "#160B2C",
-    "border-radius": ""
+    "box-shadow": "#160B2C"
   },
   "Search-Button-Icon": {
-    "color": "#B4181E"
+    "color": "#FFFFFF"
   },
+  "Search-Bar": {},
+  "Search-Bar-Input": {},
+  "Search-Bar-Buttons": {},
   "Title-Bar": {
     "background": "#160B2C",
     "box-shadow": "#160B2C",
     "border": "#000814"
   },
-  "Title-Bar-Text": {
-    "color": ""
-  },
+  "Title-Bar-Text": {},
   "Title-Bar-Growtopia-Button": {},
   "Title-Bar:-FAQ-Container": {},
   "Title-Bar:-FAQ-Container-Text": {},
@@ -39,9 +41,7 @@
     "box-shadow": "#160B2C",
     "border": "#160B2C"
   },
-  "Item-Chip-Base-Text": {
-    "color": ""
-  },
+  "Item-Chip-Base-Text": {},
   "Item-Chip-Base-Button": {},
   "Item-Chip-Base-Button-Text": {},
   "Item-Chip-Base-Heading-or-Title": {},
@@ -74,13 +74,13 @@
     "background": "url(https://wallpapercave.com/wp/wp5021697.png)",
     "box-shadow": "#160B2C"
   },
-  "Footer-Text": {
-    "color": ""
-  },
+  "Footer-Text": {},
   "Footer-Heading": {},
   "Footer-Links": {},
   "Footer-Social-Links": {},
   "meta": {
-    "version": 3
+    "version": 3,
+    "exportName": "Pewdiepie fix",
+    "timestamp": 1619495618629
   }
 }
