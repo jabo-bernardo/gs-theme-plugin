@@ -1,466 +1,14 @@
 /*
 	@plugin
 	@name GrowStocks Theme Customization Plugin
-	@version 3.1.4
-	@author Jabo
-	@description Create your own or use an existing theme witn this plugin that gives you the power to take control over the website's design. - Create or
+	@version 3.2.0
+	@author Jabo#7775
+	@description Create your own or use an existing theme witn this plugin that gives you the power to take control over the website's design.
 	@localStoragePrefix gsCTheme-
 	@endplugin
 */
 
-const componentTree = [
-	{
-		name: "Main Container",
-		description: "Affects the main container/body of the site. You can change the main background from here.",
-		selector: "body",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "GrowStocks Loading Icon",
-		description: "Affects the loading icon that can be seen when going through different pages",
-		selector: ".gsLoading",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "GrowStocks Loading Icon Text",
-		description: "Affects the loading icon's text that can be seen when going through different pages",
-		selector: ".gsLoading span",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Header",
-		description: "Affects the container of the GrowStocks' Logo",
-		selector: "header",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Navigation Bar",
-		description: "Affects the navigation bar",
-		selector: "#id1",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Navigation Bar Item or Link",
-		description: "Affects the navigation bar's links (not including the search button)",
-		selector: ".navBar #navWrap .navContent, .navBar #navWrap .navContent i",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Navigation Bar Active Page",
-		description: "Affects the current active link in the navigation bar",
-		selector: ".navBar .active",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Search Button",
-		description: "Affects the search button located in the navigation bar",
-		selector: "#searchButton",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Search Button Icon",
-		description: "Affects the search button's icon (the magnifying glass)",
-		selector: '#searchButton > em',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Search Bar",
-		description: "Affects the search bar container (shown when the search button was clicked)",
-		selector: "#searchForm",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Search Bar Input",
-		description: "Affects the search bar input element",
-		selector: "#searchForm input",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Search Bar Buttons",
-		description: "Affects the search bar button elements (the cross & magnifying glass icon)",
-		selector: "#searchForm button",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Title Bar",
-		description: "Affects the title bars, these elements contains the title containers such as the \"Daily Quest\" container that can be seen on the homepage.",
-		selector: '.titleBar2, .titleBar3, .titleBar',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Title Bar Text",
-		description: "Affects the title bars' text, these elements contains the title containers such as the \"Daily Quest\" container that can be seen on the homepage.",
-		selector: '.titleBar2 *, .titleBar3 *, .titleBar *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Title Bar Growtopia Button",
-		description: "Affects the huge growtopia-like button that can be found on title bars (commonly seen on website announcement container)",
-		selector: '.titleBar2 a.growButton',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Title Bar: FAQ Container",
-		description: "Affects the title bars in the FAQ page",
-		selector: '.openFaq',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Title Bar: FAQ Container Text",
-		description: "Affects the title bars' text in the FAQ page",
-		selector: '.openFaq *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base",
-		description: "Affects the main items container",
-		selector: '.itemChipHead',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base Text",
-		description: "Affects all of the text content in the item container",
-		selector: '.itemChipHead p, .itemChipHead b, .itemChipHead h2, .itemChipHead h4, .itemChipHead a, .itemChipHead small',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base Button",
-		description: "Affects the main items container's buttons such as the report button at the top right corner of the container",
-		selector: '.itemChipHead button',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base Button Text",
-		description: "Affects the main items container's buttons' text such as the report button at the top right corner of the container",
-		selector: '.itemChipHead button *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base Heading or Title",
-		description: "Affects the heading/title elements in an item container",
-		selector: '.itemChipHead h2',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Chip Base Item Name",
-		description: "Affects the item name element in an item container",
-		selector: '.itemChipHead a.itemLink',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Information Container",
-		description: "Affects the item information container that can be found on an item's page",
-		selector: '.infoBlock-items',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Information Status: Success",
-		description: "Affects the status indicator in the item information container",
-		selector: '.greenRow, .greenRow *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Information Status: Warning",
-		description: "Affects the status indicator in the item information container",
-		selector: '.yellowRow, .yellowRow *, .orangeRow, .orangeRow *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Information Status: Error",
-		description: "Affects the status indicator in the item information container",
-		selector: '.redRow, .redRow *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Item Information Status: Information",
-		description: "Affects the status indicator in the item information container",
-		selector: '.blueRow, .blueRow *',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Float Buttons",
-		description: "Affects the buttons that can be found on the Shop & Marketplace page",
-		selector: '.floatButton2, .floatButton',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Float Buttons Text",
-		description: "Affects the buttons's text that can be found on the Shop & Marketplace page",
-		selector: '.floatButton2 *, .floatButton2 p',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Buy Item Button",
-		description: "Affects the buy item button that can be found on the Marketplace page",
-		selector: '.floatButton.buyBtn',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Buy Item Button Text",
-		description: "Affects the buy item button's text that can be found on the Marketplace page",
-		selector: '.floatButton.buyBtn p',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Sell Item Button",
-		description: "Affects the sell item button that can be found on the Marketplace page",
-		selector: '.floatButton.sellBtn',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Sell Item Button Text",
-		description: "Affects the sell item button's text that can be found on the Marketplace page",
-		selector: '.floatButton.sellBtn p',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Find Offer Button",
-		description: "Affects the find offer button that can be found on the Marketplace page",
-		selector: '.floatButton.findOffer',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},	
-	{
-		name: "Float Buttons: Find Offer Button Text",
-		description: "Affects the find offer button's button that can be found on the Marketplace page",
-		selector: '.floatButton.findOffer p',
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		}
-	},
-	{
-		name: "Footer",
-		description: "Affects the footer of the site",
-		selector: "footer",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Footer Text",
-		description: "Affects the footer's text",
-		selector: "footer p, footer h4, footer a, footer em",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Footer Heading",
-		description: "Affects the footer's headings such as the \"GrowStocks\" text",
-		selector: "footer p, footer h4, footer a, footer em",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Footer Links",
-		description: "Affects the links found in the footer (e.g Status, Privacy Policy, etc.)",
-		selector: "footer .varLinks a p, footer .varLinks2 a p",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-	{
-		name: "Footer Social Links",
-		description: "Affects the social media links",
-		selector: "footer .socials a",
-		styles: {
-			"background": "",
-			"color": "",
-			"border-radius": "",
-			"box-shadow": ""
-		},
-	},
-];
+let componentTree = localStorage.getItem('gsCTheme-component-tree') ? JSON.parse(localStorage.getItem('gsCTheme-component-tree')) : null;
 
 class GrowStocksToolbox {
 	static createGrowtopiaModal({ modalClass, itemIcon, title, description, content, footerButtons, triggerClass, closeButtonClass }) {
@@ -512,11 +60,14 @@ class GrowStocksToolbox {
 
 class ThemeCustomization {
 
-	constructor(styledElements) {
-		this.styledElements = styledElements || [];
+	constructor(Components) {
+		this.Components = Components || [];
 		this.styleString = "";
 		this.communityThemes = [];
+		this.gui = new ThemeCustomizationGUI(this);
+		this.gui.createGUI();
 	}
+
 	applyStyling() {
 		// Remove the current styling to prevent overrides
 		$(".gstcStyling").remove();
@@ -530,125 +81,11 @@ class ThemeCustomization {
 		$("body").append(gstcStyleElement);
 	}
 
-	async createGUI() {
-		let latestAnnouncement = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/announcements/current.json?v=${(new Date()).getMinutes()}`);
-		latestAnnouncement = await latestAnnouncement.json();
-
-		let themes = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/themes-list.json?v=${(new Date()).getMinutes()}`);
-		themes = await themes.json();
-
-		this.communityThemes = themes;
-
-		this._createFloatButton();
-		const currentPath = location.pathname;
-		const content = `
-			<h2>Announcement</h2>
-			<p style="font-size: 1rem;">${latestAnnouncement.content}<p>
-
-			<h2 style="margin-top: 2rem;">Basic Guide</h2>
-			<p style="font-size: 1rem;">This plugin will let you customize the whole GrowStocks's website. To get started choose a component/element from the table of contents below that you want to modify initially it will give you 4 styles property to play around with, you can add more style property by clicking the "Add CSS Property" button and it must be a valid css property (e.g background-color, display, transform, and more).<p>				
-			<p style="font-size: 1rem; margin-top: 0.5rem;">NOTE: Every value should be a valid CSS value (e.g color hex codes, rgb, rgba, and more!)<p>
-			<p style="font-size: 1rem; margin-top: 0.5rem;">TIP: You can set images as your background by setting the value to "url(paste image url here)"<p>
-
-			<h2 style="margin-top: 2rem;">Table of Contents</h2>
-			<p class="gstc-table-of-contents" style="display: none; height: auto; font-size: 0.8rem">${componentTree.map(component => `<a class="noLoader" href="${currentPath}#${component.name.replace(/ +/g, "-")}" style="font-size: 1rem">${component.name}</a>`).join(' Ã¢â‚¬Â¢ ')}</p>			
-			<p style="font-size: 1rem">Quickly navigate through your stylesheet.</p>
-			<button class="growButton gstc-toggle-toc">Show/Hide</button>
-
-			<h2 style="margin-top: 2rem;">Import Themes</h2>
-			<p>Import via JSON</p>
-			<p style="font-size: 0.8rem;">If someone sends you the JSON file of their theme open it up and paste the contents here</p>
-			<textarea class="json-import" style="padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; font-family: monospace; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;" rows="4" placeholder="Paste the JSON file contents here"></textarea><br/>
-			<button class="growButton growCancelButton import-theme-json">Apply Theme</button><br/>
-			<br/>
-			<p>Community Themes</p>
-			<p style="font-size: 0.8rem;">These are the themes that were submitted by the GrowStocks community. Share your theme by <a href="https://discord.gg/GMucqpWYE4">joining the GrowStocks Discord Server</a>, then send a DM to <b>Jabo#7775</b></p>
-			<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
-				${themes && themes.map(theme => `<option style="color: #1E1E1E">${theme.themeName}</option>`)}
-			</select><br/>
-			<button class="growButton growCancelButton import-theme-community">Apply Theme</button><br/>
-
-			<h2 style="margin-top: 2rem;">Export Theme</h2>
-			<p style="font-size: 1rem;">Want to share your themes to your friends?<p>
-			<button class="growButton growCancelButton export-theme">Export Theme</button><br/>
-
-			${this._createCustomizationSection()}
-		`
-		const footer = `
-			<button class="growButton gstcApplyTheme">Apply Theme</button>
-			<button class="growButton growCancelButton gstcModal-close">Close</button>
-		`
-		GrowStocksToolbox.createGrowtopiaModal({ modalClass: "gstcModal", triggerClass: "gstcTrigger", content, footerButtons: footer, itemIcon: "Paint Bucket - Red", title: "Theme Customization", description: "A plugin that gives you the power to take control over the website's design." });		
-		$(".add-property-btn").on('click', e => {
-			const componentClass = $(e.target).attr('data-component').replace(/ +/g, '-');
-			const propertyName = prompt("Please enter a valid CSS property name:");
-			if(!propertyName) return;
-			const contentToAdd = `
-				<div style="display: flex; column-gap: 0.5rem; align-items: center; margin: 0; margin-bottom: 0.25rem;">
-					<p style="font-size: 0.8rem; margin: 0;">${propertyName.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); })}</p>
-					<input data-component-field data-component-name="${componentClass.replace(/-/g, " ")}" data-style=${propertyName} style="margin: 0; width: 150px; font-weight: bold; color: white;" class="GTText suggPrice"/>
-				</div>			
-			`;
-			$(`.${componentClass}`).append(contentToAdd);
-		});
-		$('.gstcApplyTheme').on('click', this._applyTheme);
-		$('.gstc-toggle-toc').on('click', () => {
-			$('.gstc-table-of-contents').animate({
-				height: "toggle"
-			}, 500);
-		})
-		$(".show-property-btn").on('click', e => {
-			$(`.${$(e.target).attr('data-target')}`).animate({
-				height: "toggle"
-			}, 500)
-		})
-		$('.import-theme-community').on('click', this._importCommunityTheme);
-		$('.import-theme-json').on('click', this._importThemeJSON);
-		$('.export-theme').on('click', this._exportTheme);
-	}
-
-	_createCustomizationSection() {
-
-		const components = componentTree.map(component => {
-
-			const savedComponentStyle = JSON.parse(localStorage.getItem(`gsCTheme-${component.name.replace(/ +/g, "-")}`));
-
-			const styles = Object.entries({...component.styles, ...savedComponentStyle}).map(([key, value]) => {
-				return `
-					<div style="display: flex; column-gap: 0.5rem; align-items: center; margin: 0; margin-bottom: 0.25rem;">
-						<p style="font-size: 0.8rem; margin: 0;">${key.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); })}</p>
-						<input data-component-field data-component-name="${component.name}" data-style=${key} style="margin: 0; width: 150px; font-weight: bold; color: white;" class="GTText suggPrice" value="${(savedComponentStyle && savedComponentStyle[key]) || value || ""}"/>
-					</div>
-				`
-			}).join('');
-
-			return `
-				<div style="margin-top: 0.25rem;">
-					<p style="color: white;" id="${component.name.replace(/ +/g, "-")}">${component.name}</p>
-					<p style="font-size: 1rem">${component.description}</p>
-					<div class="${component.name.replace(/ +/g, '-').replace(/:/g, "")}-styles" style="height: auto; display: none;">
-						<div class="${component.name.replace(/ +/g, '-')}">
-							${styles}
-						</div>
-						<button data-component="${component.name}" class="growButton growCancelButton add-property-btn">Add CSS Property</button>
-					</div>
-					<button data-target="${component.name.replace(/ +/g, '-').replace(/:/g, "")}-styles" data-component="${component.name}" class="growButton show-property-btn" style="margin-top: 0.5rem;">Toggle Styles</button>
-				</div>
-			`
-		}).join('')
-
-		return `
-			<h2 style="margin-top: 1.5rem">Customize</h2>
-			<p style="font-size: 1rem">Customize the GrowStocks' website design based on your liking</p>
-			${components}
-		`
-	}
-
 	_exportTheme = () => {
 		let exportThemeContent = {};
 		const exportName = prompt("Please enter your theme name") || "my-growstocks-theme";
 		componentTree.map(component => {
-			exportThemeContent[component.name.replace(/ +/g, '-')] = JSON.parse(localStorage.getItem(`gsCTheme-${component.name.replace(/ +/g, '-')}`)) || {};
+			exportThemeContent[Utilities.replaceSpacesWithDashes(component.name)] = JSON.parse(localStorage.getItem(`gsCTheme-${Utilities.replaceSpacesWithDashes(component.name)}`)) || {};
 		})
 		exportThemeContent.meta = {
 			version: 3,
@@ -700,7 +137,7 @@ class ThemeCustomization {
 	}
 
 	_importCommunityTheme = async () => {
-		const communityTheme = this.communityThemes.find(theme => theme.themeName === $(".community-import").val());
+		const communityTheme = this.gui.getCommunityThemes().find(theme => theme.themeName === $(".community-import").val());
 		if(!communityTheme.url) return alert("Please select a community theme from the dropdown menu");
 		$(".import-theme-community").html("Importing...");
 		$(".import-theme-community").attr("disabled", "true");
@@ -763,20 +200,8 @@ class ThemeCustomization {
 		GrowStocksToolbox.closeModalWithClass('gstcModal');
 	}
 
-	_createFloatButton() {
-		// Removes the existing float button
-		$(".gstcTrigger").remove();
-
-		const floatButtonCode = `
-			<div class="gstcTrigger" style="cursor: pointer; color: #1E1E1E; display: flex; align-items: center; justify-content: center; position: fixed; width: 50px; height: 50px; background-color: #FFF; border-radius: 50%; bottom: 1rem; right: 1rem; box-shadow: 0 0 5px rgb(0 0 0 / 65%); z-index: 100;">
-				<span style="color: #1E1E1E!important; font-size: 2rem" class="material-icons">brush</span>
-			</div>
-		`;
-		$("body").append(floatButtonCode);
-	}
-
 	_generateStyles() {
-		const styleString = this.styledElements.map(elem => elem.toStyle()).join('\n');
+		const styleString = this.Components.map(elem => elem.toStyle()).join('\n');
 		this.styleString = `
 			.gsWrap {
 				overflow-x: visible;
@@ -788,14 +213,207 @@ class ThemeCustomization {
 	static getTheme() {
 		let theme = {}
 		componentTree.forEach(component => {
-			theme[component.name.replace(/ +/g, "-")] = JSON.parse(localStorage.getItem(`gsCTheme-${component.name.replace(/ +/g, "-")}`)) || {};
+			theme[Utilities.replaceSpacesWithDashes(component.name)] = JSON.parse(localStorage.getItem(`gsCTheme-${Utilities.replaceSpacesWithDashes(component.name)}`)) || {};
 		})
 		return theme;
 	}
 
 }
 
-class StyledElement {
+class ThemeCustomizationGUI {
+
+	constructor(themeCustomization) {
+		this.themeCustomization = themeCustomization;
+		this.communityThemes = [];
+	}
+
+	getCommunityThemes() {
+		return this.communityThemes;
+	}
+
+	addCSSProperty(e) {
+		const componentClass = $(e.target).attr('data-component').replace(/ +/g, '-');
+		let propertyName = prompt("Please enter a valid CSS property name:");
+		propertyName = propertyName.toLocaleLowerCase();
+		propertyName = propertyName.trim()
+		propertyName = Utilities.replaceSpacesWithDashes(propertyName);
+		if(!propertyName) return;
+		$(`.${componentClass}`).append(this.createStyleInputGUI(propertyName, componentClass));
+	}
+
+	toggleTableOfContents() {
+		$('.gstc-table-of-contents').animate({
+			height: "toggle"
+		}, 500);
+	}
+
+	toggleStyleProperty(e) {
+		$(`.${$(e.target).attr('data-target')}`).animate({
+			height: "toggle"
+		}, 500);
+	}
+
+	addListeners() {
+		$(".add-property-btn").on('click', e => this.addCSSProperty(e));
+		$('.gstcApplyTheme').on('click', this.themeCustomization._applyTheme);
+		$('.gstc-toggle-toc').on('click', this.toggleTableOfContents);
+		$(".show-property-btn").on('click', this.toggleStyleProperty);
+		$('.import-theme-community').on('click', this.themeCustomization._importCommunityTheme);
+		$('.import-theme-json').on('click', this.themeCustomization._importThemeJSON);
+		$('.export-theme').on('click', this.themeCustomization._exportTheme);
+	}
+
+	async getAnnouncementsFromCDN() {
+		let latestAnnouncement = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/announcements/current.json?v=${(new Date()).getMinutes()}`);
+		latestAnnouncement = await latestAnnouncement.json();
+		return latestAnnouncement.content;
+	}
+
+	async getCommunityThemesFromCDN() {
+		let themes = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/themes/v3/themes-list.json?v=${(new Date()).getMinutes()}`);
+		themes = await themes.json();
+		return themes;
+	}
+
+	async loadCommunityThemes() {
+		const themes = await this.getCommunityThemesFromCDN();
+		this.communityThemes = themes;
+		$('.community-import').html(themes.map(theme => `<option style="color: #1E1E1E">${theme.themeName}</option>`).join(''));
+	}
+
+	async loadAnnouncement() {
+		const announcement = await this.getAnnouncementsFromCDN();
+		$("#gstcAnnouncementContent").html(announcement);
+	}
+
+	createStyleInputGUI(propertyName, componentClass, propertyValue) {
+		return `
+			<div style="display: flex; column-gap: 0.5rem; align-items: center; margin: 0; margin-bottom: 0.25rem;">
+				<p style="font-size: 0.8rem; margin: 0;">${propertyName.replace(/-/g, ' ').replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); })}</p>
+				<input data-component-field data-component-name="${componentClass.replace(/-/g, " ")}" data-style=${propertyName} style="margin: 0; width: 150px; font-weight: bold; color: white;" class="GTText suggPrice" value="${propertyValue || ""}"/>
+			</div>
+		`
+	}
+
+	createAnnouncementGUI() {
+		return `
+			<h2>Announcement</h2>
+			<p id="gstcAnnouncementContent" style="font-size: 1rem;">Loading...<p>
+		`;
+	}
+
+	createBasicGuideGUI() {
+		return `
+			<h2 style="margin-top: 2rem;">Basic Guide</h2>
+			<p style="font-size: 1rem;">This plugin will let you customize the whole GrowStocks's website. To get started choose a component/element from the table of contents below that you want to modify initially it will give you 4 styles property to play around with, you can add more style property by clicking the "Add CSS Property" button and it must be a valid css property (e.g background-color, display, transform, and more).<p>				
+			<p style="font-size: 1rem; margin-top: 0.5rem;">NOTE: Every value should be a valid CSS value (e.g color hex codes, rgb, rgba, and more!)<p>
+			<p style="font-size: 1rem; margin-top: 0.5rem;">TIP: You can set images as your background by setting the value to "url(paste image url here)"<p>
+		`;
+	}
+
+	createTableOfContentsGUI() {
+		const currentPath = location.pathname;
+		return `
+			<h2 style="margin-top: 2rem;">Table of Contents</h2>
+			<p class="gstc-table-of-contents" style="display: none; height: auto; font-size: 0.8rem">${componentTree.map(component => `<a class="noLoader" href="${currentPath}#${Utilities.replaceSpacesWithDashes(component.name)}" style="font-size: 1rem">${component.name}</a>`).join(' Ã¢â‚¬Â¢ ')}</p>			
+			<p style="font-size: 1rem">Quickly navigate through your stylesheet.</p>
+			<button class="growButton gstc-toggle-toc">Show/Hide</button>
+		`;
+	}
+
+	createImportGUI() {
+		return `
+			<h2 style="margin-top: 2rem;">Import Themes</h2>
+			<p>Import via JSON</p>
+			<p style="font-size: 0.8rem;">If someone sends you the JSON file of their theme open it up and paste the contents here</p>
+			<textarea class="json-import" style="padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; font-family: monospace; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;" rows="4" placeholder="Paste the JSON file contents here"></textarea><br/>
+			<button class="growButton growCancelButton import-theme-json">Apply Theme</button><br/>
+			<br/>
+			<p>Community Themes</p>
+			<p style="font-size: 0.8rem;">These are the themes that were submitted by the GrowStocks community. Share your theme by <a href="https://discord.gg/GMucqpWYE4">joining the GrowStocks Discord Server</a>, then send a DM to <b>Jabo#7775</b></p>
+			<select class="community-import" style="margin-bottom: 0.35rem; padding: 10px; width: 80%; background: transparent; color: #FFFFFF; font-weight: bold; border: 5px solid #bee8f1; box-shadow: #000 3px 3px, #000 3px 3px inset; border-radius: 7px;">
+				<option>Loading...</option>
+			</select><br/>
+			<button class="growButton growCancelButton import-theme-community">Apply Theme</button><br/>
+		`;
+	}
+
+	createExportGUI() {
+		return `
+			<h2 style="margin-top: 2rem;">Export Theme</h2>
+			<p style="font-size: 1rem;">Want to share your themes to your friends?<p>
+			<button class="growButton growCancelButton export-theme">Export Theme</button><br/>
+		`;
+	}
+
+	createFooterButtonsGUI() {
+		return `
+			<button class="growButton gstcApplyTheme">Apply Theme</button>
+			<button class="growButton growCancelButton gstcModal-close">Close</button>
+		`
+	}
+
+	async createGUI() {
+		this.loadAnnouncement();
+		this.loadCommunityThemes();
+		this.createFloatButton();
+
+		const content = `
+			${this.createAnnouncementGUI()}
+			${this.createBasicGuideGUI()}
+			${this.createTableOfContentsGUI()}
+			${this.createImportGUI()}
+			${this.createExportGUI()}
+			${this.createCustomizationSection()}
+		`;
+
+		GrowStocksToolbox.createGrowtopiaModal({ modalClass: "gstcModal", triggerClass: "gstcTrigger", content, footerButtons: this.createFooterButtonsGUI(), itemIcon: "Paint Bucket - Red", title: "Theme Customization", description: "A plugin that gives you the power to take control over the website's design." });		
+
+		this.addListeners();
+	}
+
+	createCustomizationSection() {
+
+		const components = componentTree.map(component => {
+
+			const savedComponentStyle = JSON.parse(localStorage.getItem(`gsCTheme-${Utilities.replaceSpacesWithDashes(component.name)}`));
+
+			const styles = Object.entries({...component.styles, ...savedComponentStyle}).map(([propertyName, propertyValue]) => this.createStyleInputGUI(propertyName, component.name, propertyValue)).join('');
+
+			return `
+				<div style="margin-top: 0.25rem;">
+					<p style="color: white;" id="${Utilities.replaceSpacesWithDashes(component.name)}">${component.name}</p>
+					<p style="font-size: 1rem">${component.description}</p>
+					<div class="${Utilities.replaceSpacesWithDashes(component.name).replace(/:/g, "")}-styles" style="height: auto; display: none;">
+						<div class="${Utilities.replaceSpacesWithDashes(component.name)}">
+							${styles}
+						</div>
+						<button data-component="${component.name}" class="growButton growCancelButton add-property-btn">Add CSS Property</button>
+					</div>
+					<button data-target="${Utilities.replaceSpacesWithDashes(component.name).replace(/:/g, "")}-styles" data-component="${component.name}" class="growButton show-property-btn" style="margin-top: 0.5rem;">Toggle Styles</button>
+				</div>
+			`
+		}).join('')
+
+		return `
+			<h2 style="margin-top: 1.5rem">Customize</h2>
+			<p style="font-size: 1rem">Customize the GrowStocks' website design based on your liking</p>
+			${components}
+		`
+	}
+
+	createFloatButton() {
+		$(".gstcTrigger").remove();
+		const floatButtonCode = `
+			<div class="gstcTrigger" style="cursor: pointer; color: #1E1E1E; display: flex; align-items: center; justify-content: center; position: fixed; width: 50px; height: 50px; background-color: #FFF; border-radius: 50%; bottom: 1rem; right: 1rem; box-shadow: 0 0 5px rgb(0 0 0 / 65%); z-index: 100;">
+				<span style="color: #1E1E1E!important; font-size: 2rem" class="material-icons">brush</span>
+			</div>
+		`;
+		$("body").append(floatButtonCode);
+	}
+}
+
+class Component {
 	constructor({ childrens, styles, name, description, selector }) {
 		this.name = name;
 		this.description = description;
@@ -814,26 +432,78 @@ class StyledElement {
 
 		return `
 			${this.selector} {
-				${Object.entries({ ...this.styles, ...savedComponentStyle }).map(([key, value]) => `${key}: ${(savedComponentStyle ? savedComponentStyle[key] : null) || value}!important;`).join("\n")}
+				${Object.entries({ ...this.styles, ...savedComponentStyle }).map(([key, value]) => value ? `${key}: ${(savedComponentStyle ? savedComponentStyle[key] : null) || value}!important;` : '').join("\n")}
 			}
-		`
+		`.replace(/\n/g, '');
 	}
 }
 
-function _parseComponentTree(componentTree) {
-	const components = [];
-	for(let component of componentTree) {
-		components.push(_parseComponent(component));
+class Utilities {
+
+	static replaceSpacesWithDashes(string) {
+		return string.replace(/ +/g, '-');
 	}
-	return components;	
+
+	static replaceDashesWithSpaces(string) {
+		return string.replace(/-/g, ' ');
+	}
+	
 }
 
-function _parseComponent(component) {
-	let element = new StyledElement(component);
-	element.childrens = element.childrens ? element.childrens.map(child => _parseComponent(child)) : [];
-	return element;
+class Parser {
+
+	static parseComponentTree(tree) {
+		const components = [];
+		for(let component of componentTree) components.push(new Component(component));
+		return components;
+	} 
+
 }
 
-const themeCustomization = new ThemeCustomization(_parseComponentTree(componentTree));
-themeCustomization.createGUI();
-themeCustomization.applyStyling()
+async function updateComponentTree() {
+	console.log(`%cGS Theme Customization: %cChecking for updates`, 'color: red; font-weight: bolder', 'color: yellow;');
+	let currentComponentTreeVersion = localStorage.getItem('gsCTheme-component-tree-version');
+	let liveComponentTreeVersion = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/config/component-tree-version.json?v=${Date.now()}`, { cache: 'no-store' });
+	liveComponentTreeVersion = await liveComponentTreeVersion.json();
+	liveComponentTreeVersion = liveComponentTreeVersion.version;
+	if(!currentComponentTreeVersion) {
+		console.log(`%cGS Theme Customization: %cUnable to find component tree version on your machine, Setting it up!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		currentComponentTreeVersion = liveComponentTreeVersion;
+		console.log(`%cGS Theme Customization: %cLoading component tree version into the memory`, 'color: red; font-weight: bolder', 'color: yellow;');
+		localStorage.setItem('gsCTheme-component-tree-version', liveComponentTreeVersion);
+		console.log(`%cGS Theme Customization: %cLoaded component tree version into the memory!`, 'color: red; font-weight: bolder', 'color: yellow;');
+
+		console.log(`%cGS Theme Customization: %cLoading component tree contents into the memory`, 'color: red; font-weight: bolder', 'color: yellow;');
+		componentTree = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/config/component-tree.json?v=${Date.now()}`, { cache: 'no-store' });
+		componentTree = await componentTree.json();
+		localStorage.setItem('gsCTheme-component-tree', JSON.stringify(componentTree));
+		console.log(`%cGS Theme Customization: %cLoaded component tree contents into the memory!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		return componentTree;
+	}
+	if(parseInt(currentComponentTreeVersion) < parseInt(liveComponentTreeVersion) || !componentTree) {
+		if(!componentTree) { 
+			console.log(`%cGS Theme Customization: %cFailed to find the component tree contents in your memory loading it in!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		} else {
+			console.log(`%cGS Theme Customization: %cNEW COMPONENT TREE VERSION FOUND! Loading it in!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		}
+		componentTree = await fetch(`https://raw.githubusercontent.com/jabo-bernardo/gs-theme-plugin/master/config/component-tree.json?v=${Date.now()}`, { cache: 'no-store' });
+		componentTree = await componentTree.json();
+		localStorage.setItem('gsCTheme-component-tree', JSON.stringify(componentTree));
+		console.log(`%cGS Theme Customization: %cLoaded component tree contents into the memory!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		return componentTree;
+	}
+	console.log(`%cGS Theme Customization: %cAlready up to date :)`, 'color: red; font-weight: bolder', 'color: yellow;');
+	return componentTree;
+}
+
+async function launchPlugin() {	
+	console.log(`%cGS Theme Customization by Jabo`, 'font-weight: bold; font-size: 50px;color: red; text-shadow: 2px 2px 0 rgb(217,31,38) , 5px 5px 0 rgb(226,91,14) , 8px 8px 0 rgb(245,221,8) , 11px 11px 0 rgb(5,148,68) , 14px 14px 0 rgb(2,135,206) , 17px 17px 0 rgb(4,77,145) , 20px 20px 0 rgb(42,21,113)');
+	console.log(`%cCreate your own or use an existing theme witn this plugin that gives you the power to take control over the website's design.`, 'color: #AAA');
+	console.log(`%cFeel free to contribute to the plugin Github: https://github.com/jabo-bernardo/gs-theme-plugin`, 'color: #AAA');
+	const activeComponentTree = await updateComponentTree();
+	const parsedComponentTree = Parser.parseComponentTree(activeComponentTree);
+	const themeCustomization = new ThemeCustomization(parsedComponentTree);
+	themeCustomization.applyStyling();
+}
+
+launchPlugin();
