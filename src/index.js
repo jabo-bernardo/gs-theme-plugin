@@ -490,6 +490,8 @@ async function updateComponentTree() {
 		componentTree = await componentTree.json();
 		localStorage.setItem('gsCTheme-component-tree', JSON.stringify(componentTree));
 		console.log(`%cGS Theme Customization: %cLoaded component tree contents into the memory!`, 'color: red; font-weight: bolder', 'color: yellow;');
+		currentComponentTreeVersion = liveComponentTreeVersion;
+		localStorage.setItem('gsCTheme-component-tree-version', liveComponentTreeVersion);
 		return componentTree;
 	}
 	console.log(`%cGS Theme Customization: %cAlready up to date :)`, 'color: red; font-weight: bolder', 'color: yellow;');
