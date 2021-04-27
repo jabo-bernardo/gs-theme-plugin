@@ -551,7 +551,7 @@ class ThemeCustomization {
 			<p style="font-size: 1rem; margin-top: 0.5rem;">TIP: You can set images as your background by setting the value to "url(paste image url here)"<p>
 
 			<h2 style="margin-top: 2rem;">Table of Contents</h2>
-			<p class="gstc-table-of-contents" style="display: none; height: auto; font-size: 0.8rem">${componentTree.map(component => `<a class="noLoader" href="${currentPath}#${component.name.replace(/ +/g, "-")}" style="font-size: 1rem">${component.name}</a>`).join(' â€¢ ')}</p>			
+			<p class="gstc-table-of-contents" style="display: none; height: auto; font-size: 0.8rem">${componentTree.map(component => `<a class="noLoader" href="${currentPath}#${component.name.replace(/ +/g, "-")}" style="font-size: 1rem">${component.name}</a>`).join(' Ã¢â‚¬Â¢ ')}</p>			
 			<p style="font-size: 1rem">Quickly navigate through your stylesheet.</p>
 			<button class="growButton gstc-toggle-toc">Show/Hide</button>
 
@@ -620,7 +620,7 @@ class ThemeCustomization {
 						<input data-component-field data-component-name="${component.name}" data-style=${key} style="margin: 0; width: 150px; font-weight: bold; color: white;" class="GTText suggPrice" value="${(savedComponentStyle && savedComponentStyle[key]) || value || ""}"/>
 					</div>
 				`
-			}).join('')
+			}).join('');
 
 			return `
 				<div style="margin-top: 0.25rem;">
@@ -644,7 +644,7 @@ class ThemeCustomization {
 		`
 	}
 
-	_exportTheme() {
+	_exportTheme = () => {
 		let exportThemeContent = {};
 		const exportName = prompt("Please enter your theme name") || "my-growstocks-theme";
 		componentTree.map(component => {
@@ -665,7 +665,7 @@ class ThemeCustomization {
 		downloadElement.remove();
 	}
 
-	_importThemeJSON() {
+	_importThemeJSON = () => {
 		let jsonData = $(".json-import").val();
 		try {
 			jsonData = JSON.parse(jsonData);
@@ -699,7 +699,7 @@ class ThemeCustomization {
 		}
 	}
 
-	async _importCommunityTheme() {
+	_importCommunityTheme = async () => {
 		const communityTheme = this.communityThemes.find(theme => theme.themeName === $(".community-import").val());
 		if(!communityTheme.url) return alert("Please select a community theme from the dropdown menu");
 		$(".import-theme-community").html("Importing...");
@@ -818,10 +818,6 @@ class StyledElement {
 			}
 		`
 	}
-}
-
-class ThemeCustomizationGUI {
-
 }
 
 function _parseComponentTree(componentTree) {
