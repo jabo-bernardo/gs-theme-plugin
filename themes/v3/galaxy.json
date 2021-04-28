@@ -4,6 +4,8 @@
     "background-size": "cover",
     "background-attachment": "fixed"
   },
+  "GrowStocks-Loading-Icon": {},
+  "GrowStocks-Loading-Icon-Text": {},
   "Header": {
     "background": "transparent",
     "box-shadow": "none"
@@ -24,6 +26,16 @@
     "box-shadow": "0px 8px 6px -4px rgba(0, 0, 0, 0.5)"
   },
   "Search-Button-Icon": {},
+  "Search-Bar": {
+    "background": "none"
+  },
+  "Search-Bar-Input": {
+    "background": "rgba(181, 255, 246, 0.333)",
+    "color": "white"
+  },
+  "Search-Bar-Buttons": {
+    "background": "rgba(181, 255, 246, 0.333)"
+  },
   "Title-Bar": {
     "background": "#2c6c7a55",
     "box-shadow": "0px 8px 6px -4px rgba(0, 0, 0, 0.5)",
@@ -75,7 +87,7 @@
   "Footer-Social-Links": {},
   "meta": {
     "version": 3,
-    "exportName": "galaxy-pog",
-    "timestamp": 1619439503056
+    "exportName": "Galaxy",
+    "timestamp": 1619604504113
   }
 }
